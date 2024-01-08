@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="stylesheet.css", rel="stylesheet")
+    title Users Management
+body
+    h1 Users Management Database  Signup Page
+    form(action="/signup", method="POST")
+        .wrapper
+            .Email
+                label(for="email") New Email Address 
+                input(type="text", name="email")
+            .Pass
+                label(for="Password") New Password
+                input(type="password", name="pwd")
+            input(type="submit", value="Sign Up", id="signup")
+            if typeof(alertMessage) !== 'undefined' && alertMessage !== null
+            script.
+                alert("#{alertMessage}")
+            if (typeof errors !== 'undefined' && errors.length > 0)
+                each error in errors
+                    script.
+                        alert("#{error.msg}")
+            a(href="/login")
+                button(type="button") Go Back to Login

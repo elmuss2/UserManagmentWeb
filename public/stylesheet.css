@@ -1,0 +1,84 @@
+wrapper {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+  }
+  
+  .lName, .fName {
+    float: left;
+    width: 200px; 
+    height: 100px; 
+
+  }
+  .Pass, .Email{
+    float: left;
+    width: 350px; 
+    height: 150px; 
+  }
+
+  html, body {
+    background-color: aliceblue;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+  }
+  
+#button{
+    border-radius: 50px;
+    float: left;
+    margin-top: 17px;
+}
+#button:hover{
+    background-color:green;
+}
+#login{
+    margin-right: 50px;
+}
+#Display{
+    display: inline-block;
+    padding: 10px 20px;
+    border:1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    display: block;
+    position: absolute;
+    bottom: 200px;
+
+}
+#logout{
+  display: inline-block;
+    padding: 10px 20px;
+    border:1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+
+}
+#Display:hover{
+    background-color:green;
+}
+#logout:hover{
+  background-color:green;
+}
+.table {
+    border-collapse: collapse;
+    width: 80%; 
+    border: 1px solid #ddd; 
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+  }

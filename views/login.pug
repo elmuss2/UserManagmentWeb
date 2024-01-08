@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="stylesheet.css", rel="stylesheet")
+    title Users Management
+body
+    h1 Users Management Database Login Page
+    form(action="/login", method="Post")
+      .wrapper
+        .Email
+          label(for="email") Email Address 
+          input(type="text", name="email")
+        .Pass
+          label(for="Password") Password
+          input(type="text", name="pwd")
+        input(type="submit", value="Login", id="login")
+        if typeof(alertMessage) !== 'undefined' && alertMessage !== null
+          script.
+            alert("#{alertMessage}")
+        if (typeof errors !== 'undefined' && errors.length > 0)
+            each error in errors
+                script.
+                    alert("#{error.msg}")
+        a(href="/signup")
+          button(type="button") Sign Up
+      
+        
+
+
+
+
+    
+        
+      
